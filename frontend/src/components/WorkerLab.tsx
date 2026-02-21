@@ -11,6 +11,8 @@ const WorkerLab = () => {
       { type: "module" },
     );
 
+    window.FileSystemFileHandle
+
     workerRef.current.onmessage = (e) => {
       const { status, processedData } = e.data;
       if (status === "DONE") {
@@ -54,16 +56,16 @@ const WorkerLab = () => {
     }
   };
   return (
-    <div className="mt-8 p-6 bg-gray-800 rounded-lg border border-gray-700 max-w-md">
-      <h2 className="text-xl font-bold mb-4 text-purple-400">
-        Module 3: Worker Lab
+    <div className="mt-8 p-6 bg-neutral-900 rounded-lg max-w-md">
+      <h2 className="text-xl font-bold mb-4 ">
+        Worker
       </h2>
       <p className="mb-4 text-sm text-gray-300">
         Status: <span className="font-mono text-yellow-400">{status}</span>
       </p>
       <button
         onClick={runHeavyTask}
-        className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded font-medium transition-colors"
+        className="px-4 py-2 bg-white text-black rounded font-medium transition-colors"
       >
         Send 50MB to Worker
       </button>

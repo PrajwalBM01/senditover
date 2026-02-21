@@ -7,13 +7,14 @@ self.onmessage = (e: MessageEvent) => {
   if (command === "PROCESS_CHUNK") {
     console.log(`[Worker] Recived chunk of size: ${data.byteLength} bytes`);
 
-    // const view = new Uint8Array(data);
-    // for (let i = 0; i < view.length; i++) {
-    //   view[i] = Math.floor(Math.random() * 255);
-    // }
+    const view = new Uint8Array(data);
+    for (let i = 0; i < view.length; i++) {
+      view[i] = Math.floor(Math.random() * 255);
+    }
 
     console.log("[Worker] Processing complete. Sending back.");
 
     self.postMessage({ id, status: "DONE", processedData: data }, [data]);
   }
 };
+

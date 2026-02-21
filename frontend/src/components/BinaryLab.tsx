@@ -27,20 +27,32 @@ const BinaryLab = () => {
     URL.revokeObjectURL(url);
   };
   return (
-    <div className="mt-8 p-6 bg-gray-800 rounded-lg border border-gray-700 max-w-md">
-      <h2 className="text-xl font-bold mb-4 text-green-400">
-        Module 2: Binary Lab
-      </h2>
+    <div className="border border-gray-500 flex flex-col justify-center items-center p-10 rounded">
+      <h2 className="font-bold text-2xl">Binary</h2>
       <p className="mb-4 text-sm text-gray-300">
         Status: <span className="font-mono text-yellow-400">{status}</span>
       </p>
       <button
         onClick={createAndDownload}
-        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition-colors"
+        className=" bg-white px-4 py-2 text-black rounded font-medium transition-colors"
       >
         Generate Binary File
       </button>
     </div>
+    // <div className="mt-8 p-6 bg-gray-800 rounded-lg border border-gray-700 max-w-md">
+    //   <h2 className="text-xl font-bold mb-4 text-green-400">
+    //     Binary
+    //   </h2>
+    //   <p className="mb-4 text-sm text-gray-300">
+    //     Status: <span className="font-mono text-yellow-400">{status}</span>
+    //   </p>
+    //   <button
+    //     onClick={createAndDownload}
+    //     className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition-colors"
+    //   >
+    //     Generate Binary File
+    //   </button>
+    // </div>
   );
 };
 
