@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@layer base {
+    /* Webkit browsers (Chrome, Safari, Edge) */
+    ::-webkit-scrollbar {
+      width: 8px; /* Width of the entire scrollbar */
+      height: 8px; /* Height for horizontal scrollbars */
+    }
+  
+    ::-webkit-scrollbar-track {
+      background: transparent; /* Makes the track blend in */
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      background: theme('colors.gray.400'); /* Plain gray thumb */
+      border-radius: 10px; /* Rounded edges for a modern look */
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+      background: theme('colors.gray.500'); /* Darken on hover */
+    }
+  
+    /* Firefox support */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: theme('colors.gray.400') transparent;
+    }
+  }
