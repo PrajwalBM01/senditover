@@ -5,6 +5,7 @@ import BinaryLab from "./components/BinaryLab";
 import WorkerLab from "./components/WorkerLab";
 import FIleSystemLab from "./components/FIleSystemLab";
 import SignalingLab from "./components/SignalingLab";
+import TransferLab from "./components/TransferLab";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,7 +15,8 @@ function App() {
       {/* <BinaryLab /> */}
       {/* <WorkerLab /> */}
       {/* <FIleSystemLab /> */}
-      <SignalingLab />
+      {/* <SignalingLab /> */}
+      <TransferLab />
     </div>
   );
 }
