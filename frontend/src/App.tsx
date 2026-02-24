@@ -6,6 +6,7 @@ import WorkerLab from "./components/WorkerLab";
 import FIleSystemLab from "./components/FIleSystemLab";
 import SignalingLab from "./components/SignalingLab";
 import TransferLab from "./components/TransferLab";
+import WebsocketsLab from "./components/WebsocketsLab";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,7 +17,8 @@ function App() {
       {/* <WorkerLab /> */}
       {/* <FIleSystemLab /> */}
       {/* <SignalingLab /> */}
-      <TransferLab />
+      {/* <TransferLab /> */}
+      <WebsocketsLab/>
     </div>
   );
 }
